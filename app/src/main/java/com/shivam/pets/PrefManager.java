@@ -11,7 +11,7 @@ public class PrefManager {
     }
 
     public void saveLoginDetails(String email, String password) {
-        SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE);
+       final SharedPreferences sharedPreferences =new ObscuredSharedPreferences(context , context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE));
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("Email", email);
         editor.putString("Password", password);
@@ -19,12 +19,16 @@ public class PrefManager {
     }
 
     public String getEmail() {
-        SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE);
+       final SharedPreferences sharedPreferences =new ObscuredSharedPreferences(context , context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE));
+
+     //   SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE);
         return sharedPreferences.getString("Email", "");
     }
 
     public boolean isUserLogedOut() {
-        SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE);
+      final   SharedPreferences sharedPreferences =new ObscuredSharedPreferences(context , context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE));
+
+   //     SharedPreferences sharedPreferences = context.getSharedPreferences("LoginDetails", Context.MODE_PRIVATE);
         boolean isEmailEmpty = sharedPreferences.getString("Email", "").isEmpty();
         boolean isPasswordEmpty = sharedPreferences.getString("Password", "").isEmpty();
         return isEmailEmpty || isPasswordEmpty;
