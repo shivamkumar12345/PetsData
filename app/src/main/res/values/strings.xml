@@ -63,4 +63,11 @@
     <string name="discard">Discard</string>
     <string name="sure_to_delete">Are you sure to delete?</string>
     <string name="delete">Delete</string>
+    <string name="action_sign_in">SignIn</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in_short">SignIn</string>
+    <string name="error_invalid_password">check your password</string>
+    <string name="error_field_required">Email Required</string>
+    <string name="error_invalid_email">Enter correct email</string>
 </resources>

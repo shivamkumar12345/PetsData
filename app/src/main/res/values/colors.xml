@@ -32,4 +32,5 @@
     <color name="black">#000000</color>
     <color name="teal_200">#E0E5EA</color>
     <color name="teal_700">#F0F3F6</color>
+    <color name="blue">#3450EF</color>
 </resources>
